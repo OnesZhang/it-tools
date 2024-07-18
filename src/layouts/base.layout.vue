@@ -63,22 +63,22 @@ const tools = computed<ToolCategory[]>(() => [
           <div>
             IT-Tools
 
-            <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
+            <!-- <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
               v{{ version }}
-            </c-link>
+            </c-link> -->
 
-            <template v-if="commitSha && commitSha.length > 0">
+            <!-- <template v-if="commitSha && commitSha.length > 0">
               -
               <c-link target="_blank" rel="noopener" type="primary"
                 :href="`https://github.com/CorentinTh/it-tools/tree/${commitSha}`">
                 {{ commitSha }}
               </c-link>
-            </template>
+            </template> -->
           </div>
           <div>
-            © {{ new Date().getFullYear() }}
-            <c-link target="_blank" rel="noopener" href="https://github.com/CorentinTh">
-              Corentin Thomasset
+            © {{ new Date().getFullYear() }} Powered by 
+            <c-link target="_blank" rel="noopener" href="https://github.com/CorentinTh/it-tools">
+              it-tools
             </c-link>
           </div>
         </div>
@@ -98,12 +98,12 @@ const tools = computed<ToolCategory[]>(() => [
           </c-button>
         </c-tooltip>
 
-        <c-tooltip :tooltip="$t('home.uiLib')" position="bottom">
+        <!-- <c-tooltip :tooltip="$t('home.uiLib')" position="bottom">
           <c-button v-if="config.app.env === 'development'" to="/c-lib" circle variant="text"
             :aria-label="$t('home.uiLib')">
             <icon-mdi:brush-variant text-20px />
           </c-button>
-        </c-tooltip>
+        </c-tooltip> -->
         <!-- 搜索框 -->
         <command-palette />
         <!-- 语言切换 -->
