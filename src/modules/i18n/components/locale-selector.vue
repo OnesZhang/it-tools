@@ -5,7 +5,6 @@ const localesLong: Record<string, string> = {
   zh: '中文',
 };
 
-
 const localeOptions = computed(() =>
   availableLocales.map(locale => ({
     label: localesLong[locale] ?? locale,

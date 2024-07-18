@@ -9,16 +9,16 @@ import HeroGradient from '../assets/hero-gradient.svg?component';
 import MenuLayout from '../components/MenuLayout.vue';
 import NavbarButtons from '../components/NavbarButtons.vue';
 import { useStyleStore } from '@/stores/style.store';
-import { config } from '@/config';
 import type { ToolCategory } from '@/tools/tools.types';
 import { useToolStore } from '@/tools/tools.store';
 import { useTracker } from '@/modules/tracker/tracker.services';
 import CollapsibleToolMenu from '@/components/CollapsibleToolMenu.vue';
+// import { config } from '@/config';
 
 const themeVars = useThemeVars();
 const styleStore = useStyleStore();
-const version = config.app.version;
-const commitSha = config.app.lastCommitSha.slice(0, 7);
+// const version = config.app.version;
+// const commitSha = config.app.lastCommitSha.slice(0, 7);
 
 const { tracker } = useTracker();
 const { t } = useI18n();
@@ -76,7 +76,7 @@ const tools = computed<ToolCategory[]>(() => [
             </template> -->
           </div>
           <div>
-            © {{ new Date().getFullYear() }} Powered by 
+            © {{ new Date().getFullYear() }} Powered by
             <c-link target="_blank" rel="noopener" href="https://github.com/CorentinTh/it-tools">
               it-tools
             </c-link>
