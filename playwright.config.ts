@@ -29,7 +29,7 @@ export default defineConfig({
     trace: 'on-first-retry',
 
     testIdAttribute: 'data-test-id',
-    locale: 'en-GB',
+    locale: 'zh-CN',
     timezoneId: 'Europe/Paris',
   },
 
@@ -55,11 +55,11 @@ export default defineConfig({
 
   ...(useWebServer
     && {
-      webServer: {
-        command: 'npm run preview',
-        url: 'http://localhost:5050',
-        reuseExistingServer: !isCI,
-      },
-    }
+    webServer: {
+      command: 'npm run preview',
+      url: 'http://localhost:5050',
+      reuseExistingServer: !isCI,
+    },
+  }
   ),
 });
